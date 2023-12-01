@@ -1,76 +1,119 @@
+/*config: elementos sin margenes ni relleno*/
+html{
+    font-size: 16px;
+    font-family: Montserrat;
+}
 body{
-    background-image: url(background.jpg);
-    background-size: 100%;
-    color: white;
+    padding: 0px;
+    margin: 0px;
 }
-#grid{
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
+/*Comportamiento de objetos ----- Element Behaviour*/
+header{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
 }
-#grid p {
-    font-family: Quicksand;
-    font-size: 43px;
-    margin-left: 10%;
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-nav{
-    grid-column: 3/5;
-    margin-top: 3%;
+header nav ul{
+    margin-right: 5%;
 }
-nav a {
-    font-family: Quicksand;
-    font-size: 30px;
+header nav ul li{
+    display: inline-block;
+    margin: 0px 20px;
 }
-#links{
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    text-align: center;
-}
-#Linkline{
+header nav ul li a #line{
+    background-color: black;
     min-height: 2px;
-    background-color: rgb(240, 36, 94);
-    margin-left: 100%;
-    margin-right: 100%;
+    margin: 0px 100%;
 }
-#links a:hover #Linkline{
-    margin-left: 20%;
-    margin-right: 20%;
-    transition-duration: 800ms;
-    transition-property: margin-left;
-    transition-property: margin-right;
+header nav ul li a:hover #line{
+    margin: 0px 0px;
+    transition-property: margin;
+    transition-duration: 250ms;
 }
-#links a:visited{
+/*Diseño --- Design*/
+
+/*Navbar*/
+h1.title{
+    font-weight: 400;
+    margin-left: 5%;
+    font-size: 2rem;
+}
+nav ul li a{
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+/*BANNER*/
+#main{
+    background-image: url(/resources/mainimagedark.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 1.5rem;
+    height: 40rem;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
     color: white;
 }
-#links a:active #Linkline{
-    min-height: 0px;
-}
-#links a:link{
-    text-decoration: none;
-}
-text{
-    display: grid;
-    grid-template-rows: repeat(2, 150px);
-    grid-template-columns: repeat(3, 33%);
-}
-welcome{
-    grid-row: 1;
-    grid-column: 2;
-    font-family: Quicksand;
-    font-size: 45px;
+/*PORTAFOLIO*/
+section#portafolio{
+    padding-top: 2rem;
     text-align: center;
 }
-#line{
-    background-color: rgb(240, 36, 94);
-    min-height: 3px;
-    margin-left: 25%;
-    margin-right: 25%;
+#flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-text p {
-    grid-row: 2;
-    grid-column: 1/4;
-    font-family: Quicksand;
-    font-size: 20px;
+#flex .card{
+    margin: 2rem 5.5rem;
+}
+#flex img{
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 5px;
+}
+/*TEAM*/
+section#team{
+    background-image: url(/resources/officesdark.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 40rem;
+    width: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#team .employement{
     text-align: center;
-    padding-left: 6%;
-    padding-right: 6%;
+    margin: 0px 3%;
+}
+section#team .employement img{
+    width: 18.75rem;
+    height: 18.75rem;
+}
+section#team .employement.smaller img{
+    width: 12.5rem;
+    height: 12.5rem;
+}
+/*MEDIA*/
+@media only screen and (max-width: 1380px){
+    section#team .employement img{
+        width: 10.5rem;
+        height: 10.5rem;
+    }
+    section#team .employement.smaller img{
+        width: 5.5rem;
+        height: 5.5rem;
+    }
 }
