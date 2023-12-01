@@ -77,8 +77,8 @@ section#portafolio{
     margin: 2rem 5.5rem;
 }
 #flex img{
-    max-width: 300px;
-    max-height: 300px;
+    width: 20.5rem;
+    height: 20.5rem;
     border-radius: 5px;
 }
 /*TEAM*/
@@ -106,6 +106,9 @@ section#team .employement.smaller img{
     width: 12.5rem;
     height: 12.5rem;
 }
+footer{
+    text-align: center;
+}
 /*MEDIA*/
 @media only screen and (max-width: 1380px){
     section#team .employement img{
@@ -115,5 +118,15 @@ section#team .employement.smaller img{
     section#team .employement.smaller img{
         width: 5.5rem;
         height: 5.5rem;
+    }
+    h1.title{
+        display: none;
+    }
+    header nav ul{
+        margin: 0px auto;
+        padding: 2rem 0px;
+    }
+    header nav ul li a{
+        font-size: 1.8rem;
     }
 }
